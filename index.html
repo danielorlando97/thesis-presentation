@@ -1,48 +1,1004 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/agate.css" />
+  </head>
+  <body>
+    <div class="reveal">
+    	<div class="slides">
+        	<section>
+				<div style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+        	    	<h3>DSL en Python</h3>
+        	    	<h4>Descripción de Espacios de Búsquedas</h3>
+        	    	<h4>Y Generación Muestras</h3>
+				</div>    
+				<div style="margin-top: 1cm;"> 
+        	    	<div>Autor: Daniel Orlando Ortiz Pacheco</div>
+        	    	<div>Tutor: Frank Sadan Naranjo</div>
+        	    	<div>Tutor: Alejandro Pia</div>
+				</div>
+        	</section>
+        	<section data-auto-animate>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Origen, Problema y Objetivos</h3>
+					</div> 
 				</section>
-			</div>
-		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Origen</h3>
+					</div> 
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm;">
+						...Una biblioteca de Python para encontrar automáticamente la mejor 
+						manera de resolver una tarea determinada.... 
+						Técnicamente hablando, AutoGOAL es un marco para la síntesis de 
+						programas, es decir, encontrar el mejor programa para resolver un 
+						problema dado, siempre que <span data-id="user_action">el usuario pueda describir</span>  el espacio de 
+						todos los programas posibles	
+					</div>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Origen</h3>
+					</div> 
+					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm;">
+						...Una biblioteca de Python para encontrar automáticamente la mejor 
+						manera de resolver una tarea determinada.... 
+						Técnicamente hablando, AutoGOAL es un marco para la síntesis de 
+						programas, es decir, encontrar el mejor programa para resolver un 
+						problema dado, siempre que <span data-id="user_action" style="background: #D69151;padding-left: 0.2cm; padding-right: 0.2cm;">el usuario pueda describir</span> 
+						el espacio de todos los programas posibles	
+					</div>
+				</section>
+
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Origen</h3>
+					</div> 
+					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm;">
+						...Una biblioteca de Python para encontrar automáticamente la mejor 
+						manera de resolver una tarea determinada.... 
+						Técnicamente hablando, AutoGOAL es un marco para la síntesis de 
+						programas, es decir, encontrar el mejor programa para resolver un 
+						problema dado, siempre que <span data-id="user_action" style="background: #D69151;padding-left: 0.2cm; padding-right: 0.2cm;">el usuario pueda describir</span> 
+						el espacio de todos los programas posibles	
+					</div>
+					<div style="
+						margin-top: 2cm; 
+						background: #D69151; 
+						width:fit-content; 
+						padding: 0.5cm;
+						position: absolute; left: 15%;
+						width: 17cm;
+					"> 
+						<div data-id="autogoal_cannot" >Pero AutoGOAL no puede</div> 
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Origen</h3>
+					</div> 
+					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm;">
+						...Una biblioteca de Python para encontrar automáticamente la mejor 
+						manera de resolver una tarea determinada.... 
+						Técnicamente hablando, AutoGOAL es un marco para la síntesis de 
+						programas, es decir, encontrar el mejor programa para resolver un 
+						problema dado, siempre que <span data-id="user_action" style="background: #D69151;padding-left: 0.2cm; padding-right: 0.2cm;">el usuario pueda describir</span> 
+						el espacio de todos los programas posibles	
+					</div>
+					<div style="
+						margin-top: 1.5cm; 
+						background: #D69151; 
+						width:fit-content; 
+						padding: 0.5cm;
+						position: absolute; left: 15%;
+						width: 17cm;
+
+
+					"> 
+						<div data-id="autogoal_cannot">Pero AutoGOAL no puede</div> 
+						<div data-id="contextuales">describir dependencias contextuales</div>
+					</div>
+				</section>
+
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Origen</h3>
+					</div> 
+					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm;">
+						...Una biblioteca de Python para encontrar automáticamente la mejor 
+						manera de resolver una tarea determinada.... 
+						Técnicamente hablando, AutoGOAL es un marco para la síntesis de 
+						programas, es decir, encontrar el mejor programa para resolver un 
+						problema dado, siempre que <span data-id="user_action" style="background: #D69151;padding-left: 0.2cm; padding-right: 0.2cm;">el usuario pueda describir</span> 
+						el espacio de todos los programas posibles	
+					</div>
+					<div style="
+						margin-top: 1.3cm; 
+						background: #D69151; 
+						width:fit-content; 
+						padding: 0.5cm;
+						position: absolute; left: 15%;
+						width: 17cm;
+
+	
+					"> 
+						<div data-id="autogoal_cannot">Pero AutoGOAL no puede</div> 
+						<div data-id="contextuales">describir dependencias contextuales</div>
+						<div data-id="restricciones">las restricciones son validaciones</div>
+					</div>
+				</section>
+
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Origen</h3>
+					</div> 
+					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm;">
+						...Una biblioteca de Python para encontrar automáticamente la mejor 
+						manera de resolver una tarea determinada.... 
+						Técnicamente hablando, AutoGOAL es un marco para la síntesis de 
+						programas, es decir, encontrar el mejor programa para resolver un 
+						problema dado, siempre que <span data-id="user_action" style="background: #D69151;padding-left: 0.2cm; padding-right: 0.2cm;">el usuario pueda describir</span> 
+						el espacio de todos los programas posibles	
+					</div>
+					<div style="
+						margin-top: 0.8cm; 
+						background: #D69151; 
+						width:fit-content; 
+						padding: 0.5cm;
+						position: absolute; left: 15%;
+						width: 17cm;
+
+					"> 
+						<div data-id="autogoal_cannot">Pero AutoGOAL no puede</div> 
+						<div data-id="contextuales">describir dependencias contextuales</div>
+						<div data-id="restricciones">las restricciones son validaciones</div>
+						<div>operaciones de alto nivel primitivas</div>
+					</div>
+				</section>
+				
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Problema</h3>
+					</div> 
+					<div data-id="auto_def_1" style="font-style:italic; font-size:0.8cm;">
+						Crear una herramienta 
+					</div>
+					<div data-id="auto_def_1" style="font-style:italic; font-size:0.8cm;">
+						cuyo objetivo principal es describir espacios de busquedas y
+					</div>
+					<div data-id="auto_def_1" style="font-style:italic; font-size:0.8cm;">
+						generar muestras de los espacios descritos
+					</div>
+				</section>
+
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Problema, Crítica a AutoGOAL</h3>
+					</div> 
+					<div data-markdown>
+						<textarea data-template>
+							```python [8-10|12-14]
+							from autogoal.grammar import ContinuousValue
+							from autogoal.grammar import CategoricalValue
+							from autogoal.grammar import DiscreteValue
+
+							class MySeachSpace:
+								def __init__(
+									self, 
+									a: DiscreteValue(10, 20)
+									b: ContinuousValue(0, 1),
+									c: CategoricalValue("SearchSpace", "Domain")
+								)
+									if b in [0.5, 1]:
+										raise ValueError('Invalid hyperparams')
+									self.a, self.b, self.c = a, b, c
+							```
+						</textarea>
+					</div>
+				</section>
+
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Problema, Crítica al Estado del Arte</h3>
+					</div> 
+					<ul style="margin-top: 2cm;">
+						<li>Soluciones a Problemas de Búsquedas</li>	
+						<li>HyperOpt, Chocolate, Optuna, TPOT</li>	
+						<li>AutoGloun, AutoSklearn, AutoGOAL</li>	
+					</ul>
+				</section>
+
+				<section>
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Objetivos</h3>
+					</div> 
+
+					<ul style="margin-top: 0.2cm; font-size:0.8cm;">
+						<li>Diseñar una Herramienta Independiente y Modularizada</li>	
+						<li>Superar las Limitaciones Expresivas:
+							<ul>
+								<li>Dependencia Contextuales</li>
+								<li>Espacios Recursivos</li>
+								<li>Espacios de Dimensiones Aleatorias</li>
+								<li>Espacios de Opcionales</li>
+							</ul>
+						</li>	
+						<li>Lograr Descripciones Declarativas, Expresivas, Escalables y Mantenibles</li>	
+						<li>Generar Muestras Coherentes con las Descripciones(lo más optimas posibles)
+							<ul>
+								<li>Generaciones Lineales</li>
+								<li>Generaciones Rápidas</li>
+							</ul>
+						</li>	
+					</ul>
+				</section>
+        	</section>
+
+
+			<section data-auto-animate>
+
+				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+					<h4>DSL Propuesto</h3>
+				</div> 
+
+				<div data-markdown>
+					<textarea data-template>
+						```python [1-18|6-8,10-12|8|12,17,18]
+						from search_space import Domain
+					
+						class MySeachSpace:
+							def __init__(
+								self, 
+								a: int = Domain[int](min = 10, max = 20)
+								b: float = Domain[float] | (
+									lambda x: (x != 0.5, x < 1)
+								)
+								c: str = Domain[str](
+									options = ["SearchSpace", "Domain"],
+									distribute_like=dn.UNIFORM
+								)
+							)
+								self.a, self.b, self.c = a, b, c
+
+						MySeachSpaceDomain = Domain[MySeachSpace]()
+						my_ss_instance, _ = MySeachSpaceDomain.get_sample()
+
+
+
+						```
+					</textarea>
+				</div>
+			</section>
+
+			<section data-auto-animate>
+				<section data-auto-animate data-auto-animate-id="b">
+
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+						<h4>Ejemplo de Dependencias Contextuales</h3>
+					</div> 
+
+					<div>
+						<img src="./asserts/center.png" style="height: 10cm; width: 10cm"/>
+					</div>
+				</section>
+
+				<section data-auto-animate data-auto-animate-id="b">
+					<div  data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+						<h4>Ejemplo de Dependencias Contextuales</h3>
+					</div> 
+
+						<div data-markdown >
+							<textarea data-template>
+								```python [0-12|7-8,2]
+								class CenterPoint:
+									Y_Domain = Domain[int](min=0, max=100)
+
+									def __init__(
+										self,
+										x: float = Domain[float]() | (
+											lambda x, y = Y_Domain: 
+												(x - 10 < y, y < x + 10)
+										),
+										y: int = Y_Domain
+									) -> None:
+										self.x, self.y = x, y
+								```
+							</textarea>
+						</div>
+				</section>
+			</section>
+			
+			<section data-auto-animat>
+				<section data-auto-animate data-auto-animate-id="b">
+				
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+						<h4>Modelos de Sklearn</h3>
+					</div> 
+				
+					<div data-markdown>
+						texto o imagen de sklearn
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+				
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+						<h4>Modelos de Sklearn</h3>
+					</div> 
+				
+					<div data-markdown>
+						<textarea data-template>
+							```python [|2,3,4,5|12-14,16-18]
+							class LogisticRegression:
+								Solver_Domain = Domain[str](
+									options=[
+										'newton-cg', 'lbfgs', 
+										'liblinear', 'sag', 'saga'
+									]
+								)
+
+								def __init__(
+									self,
+									solver: str = Solver_Domain,
+									intercept_scaling: float = Domain[float] | (
+										lambda x, s=Solver_Domain: 
+											(s != 'liblinear') & (x == 1)
+									),
+									random_state: int = Domain[Optional[int]] | (
+										lambda x, s=Solver_Domain: (s != [
+											'liblinear', 'sag', 'saga']) & (x == None)
+									)
+								) -> None:
+									self.s, self.i = solver, intercept_scaling
+									self.r = random_state
+							```
+						</textarea>
+					</div>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+						<h4>Restricciones Imperativas</h3>
+					</div> 
+
+					<div data-markdown data-id="code">
+						<textarea data-template>
+							```python [1-8|10, 12-14]
+							@FunctionalConstraint
+							def list_div(x: int):
+								result = [i for i in range(2, x)]
+								for i in range(2, x):
+									if x % i == 0:
+										result = [j for j in result if j % i != 0]
+								return result
+
+							class WorkPlanning:
+								Review_Work_Domain = Domain[int](min=2, max=10000)
+								def __init__(self,
+									init_time: int = Domain[int] | (
+										lambda x, y=Review_Work_Domain: (
+											x == DivList(y), x > 0
+										)
+									),
+									review_time: int = Review_Work_Domain,
+								) -> None:
+									self.init, self.review = init_time, review_time
+							```
+						</textarea>
+					</div>
+				</section>
+
+				<section data-auto-animate data-auto-animate-id="b">
+					<div  data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+						<h4>Restricciones Imperativas</h3>
+					</div> 
+				
+					<div data-markdown data-id="code">
+						<textarea data-template>
+							```python [4]
+							...
+							class WorkPlanning:
+								Review_Work_Domain = Domain[int](min=2, max=10000) | (
+									lambda x: IsEven(x)
+								)
+							...
+							```
+						</textarea>
+					</div>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+
+				<div style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+					<h4>Restricciones Sequenciales</h3>
+				</div> 
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							```python
+							class Set:
+								NDomain = Domain[int](min=0, max=1000)
+						
+								def __init__(
+									self,
+									values: List[int] = Domain[int][NDomain] | (
+										lambda x, i: x[i] != x[:i]
+									)
+								) -> None:
+									self.values = values
+							```
+						</textarea>
+					</div>
+				</section>
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							```python 
+							class GraphByAdjMatrix:
+								NDomain = Domain[int](min=0, max=1000)
+							
+								def __init__(
+									self, n: int = NDomain,
+									adj_matrix: List[int] = Domain[bool][NDomain][NDomain] | (
+										lambda x, i, j: x[i][j] == x[j][i]
+									)
+								) -> None:
+									self.n, self.matrix = n, adj_matrix
+							```
+						</textarea>
+					</div>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+
+				<div style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+					<h4>Espacios Recursivos</h3>
+				</div> 
+
+				<div data-markdown>
+					<textarea data-template>
+						```python [|4,14]
+						class Node:
+							RightDomain = Domain[Optional[Self]]()
+							LeftDomain = Domain[Optional[Self]]() | (
+								lambda x: x.LeftDomain == None
+							)
+							
+							def __init__(
+								self, 
+								right: Self = RightDomain,
+								left: Self = LeftDomain
+							) -> None:
+								self.right, self.left = right, left
+						
+						space = Domain[Node]() | (lambda x: x.RightDomain == None)
+						```
+					</textarea>
+				</div>
+			</section>
+
+			<section data-auto-animate>
+
+				<div style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+					<h4>Casos de Uso, La Mochila</h3>
+				</div> 
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							```python
+							class BagItem:
+								WeightDomain = Domain[float]()
+								PriceDomain = Domain[float](max=50)
+
+								def __init__(
+									self, 
+									w: float = WeightDomain, 
+									p: float = PriceDomain
+								) -> None:
+									self.w, self.p = w, p
+							```
+						</textarea>
+					</div>
+				</section>
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							```python
+							class BagProblem:
+								WeightDomain = Domain[float](max=100)
+								ItemsLenDomain = Domain[int](min=5, max=20)
+								ItemsDomain = Domain[BagItem][ItemsLenDomain] | (
+									lambda x, i, w=WeightDomain: x[i].WeightDomain < w
+								)
+								
+								def __init__(
+									self, 
+									w: float = WeightDomain, 
+									items: List[BagItem] = ItemsDomain
+								) -> None:
+									self.w, self.items = w, items
+							```
+						</textarea>
+					</div>
+				</section>
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							```python [1,2,6,8,10-14|8,18-20]
+							@FunctionalConstraint
+							def ComputingCurrentCapacity(
+								w: float, items: List[BagItem], 
+								current_counts: List[int]
+							):
+								return Accumulated Weight  
+
+							class BagSolution(BagProblem):
+								SolutionDomain = Domain[int][BagProblem.ItemsLenDomain] | (
+									lambda x, i, 
+										w=BagProblem.WeightDomain, 
+										items=BagProblem.ItemsDomain: (
+											x[i] < ComputingCurrentCapacity(
+										   			w, items, x[:i - 1])
+									)
+								)
+
+								def compute_price(solution: List[int] = SolutionDomian):
+									....
+									return price, solution
+
+
+									
+							```
+						</textarea>
+					</div>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+
+				<div style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+					<h4>Casos de Uso, Mapa de Colores</h3>
+				</div> 
+
+				<div data-markdown >
+					<textarea data-template>
+						```python [12-29|1-10|29-36]
+						@FunctionalConstraint
+						def AdjColors(
+							_map: List[List[bool]], 
+							country_colored: List[int], 
+							color_len: int
+						):
+							result = List of adjacent colors
+							if len(result) == color_len:
+								return []
+							return list(result)
+						
+						class ColorMapProblem:
+							CountryNDomain = Domain[int](min=5, max=20)
+							ColorNDomain = Domain[int](min=1) | (
+								lambda x, cl=CountryNDomain: x < cl)
+
+							MapDomain = Domain[
+								bool][CountryNDomain][CountryNDomain] | (
+									lambda x, i, j: x[i][j] == x[j][i]
+							)
+
+							SolutionDomain = Domain[int][CountryNDomain] | (
+								lambda x, i, cl=ColorNDomain, m=MapDomain: (
+									x[i] < color_len, 
+									x[i] != AdjColors(m, x[0:i-1], cl)
+								)
+							)
+
+							def __init__(self, 
+								....
+
+							def validate_solution(
+								self, 
+								solution: List[int] = SolutionDomain
+							):
+								....
+						```
+					</textarea>
+				</div>
+			</section>
+
+			<section data-auto-animate>
+
+				<div style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
+					<h4>Casos de Uso, AutoML</h3>
+				</div> 
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							```python
+							class AbsCluster:
+								NClusterDomain = Domain[int]()
+								def __init__(self, n_clusters: int = NClusterDomain) -> None:
+									self.n = n_clusters
+						
+							class AbsClassifier:
+								NCategoryDomain = Domain[int]()
+								def __init__(self, n_categories: int = NCategoryDomain) -> None:
+									self.n = n_categories		
+							```
+						</textarea>
+					</div>
+				</section>
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							```python							
+							class KMeans(AbsCluster):
+								pass
+							
+							class AgglomerativeClustering(AbsCluster):
+								def __init__(
+									self,
+									n_clusters: int = AbsCluster.NClusterDomain,
+									affinity: str = Domain[str](
+										options=['euclidean', 'manhattan', "l1", "l2"]
+									)
+								) -> None:
+									super().__init__(n_clusters)
+									self.affinity = affinity
+							```
+						</textarea>
+					</div>
+				</section>
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							```python
+							class KNN(AbsClassifier):
+								def __init__(self, n_categories: int = AbsClassifier.NCategoryDomain) -> None:
+									super().__init__(n_categories)
+									k = self.n * 2 - 1
+							
+							class GaussianNB(AbsClassifier):
+								def __init__(self, n_categories: int = AbsClassifier.NCategoryDomain) -> None:
+									super().__init__(n_categories)
+									p = [1/n_categories for _ in range(n_categories)]		
+							```
+						</textarea>
+					</div>
+				</section>
+				<section>
+					<div data-markdown style="width: 28cm;">
+						<textarea data-template>
+							```python
+							class SemiSupervisedClassifier:
+								ClusterDomain = Domain[Union[KMeans, AgglomerativeClustering]]()
+								def __init__(self, 
+									cluster: AbsCluster = ClusterDomain,
+									classifier: AbsClassifier = Domain[Union[KNN, GaussianNB]] | (
+										lambda x, c=ClusterDomain: (
+											x.NCategoryDomain == c.NClusterDomain
+										))
+								) -> None:
+									self.cluster, self.classifier = cluster, classifier		
+							```
+						</textarea>
+					</div>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h4>Implementación, Ideas Principales</h3>
+					</div> 
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Definición de los tiempos del DSL</h5>
+					</div> 
+					<ul style="font-size:x-large;">
+						<li>Tiempo de compilación del DSL
+							<p>	Definimos el tiempo de compilación de un DSL como todas 
+							   	las operaciones puntuales que se realizan para orquestar la 
+								infraestructura que dará soporte a la ejecución del objetivo 
+								final del mismo. Dicha infraestructura debería permanecer inmutable en
+								su mayoría durante todos los procesos posteriores a la “compilación” del DSL.
+							</p>
+						</li>
+						<li> Tiempo de ejecución del DSL
+							<p> Definimos el tiempo de ejecución del DSL como todas las operaciones que realiza la
+								herramienta, posteriores a la “compilación” del mismo, para lograr su objetivo básico
+								y principal.
+							</p>
+						</li>
+					</ul>
+				
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Interpretación de las Restricciones</h5>
+					</div> 
+					<section>
+						<div data-markdown>
+							<textarea data-template>
+								```python [11-14]
+								class CustomClass:
+									ValueDomain = Domain[int](min=0, max=1000)
+								
+									def __init__(
+										self, 
+										value: int = ValueDomain, 
+										size: int = Domain[int](min=0, max=1000)) -> None:
+										self.value, self.size = value, size
+								
+								random_limit = Domain[int](min=10, max=50)
+								lcc_space = Domain[CustomClass][10] | (
+									lambda x, i, y = random_limit: ( 
+										x[i > 3].ValueDomain != [20, 50, 30, 40],
+										x[i > 3].ValueDomain < y
+									)	
+								```
+							</textarea>
+						</div>
+					</section>
+
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Interpretación de las Restricciones</h5>
+					</div> 
+					<section>
+						<img src="./asserts/ast.png" style="height: 12cm; width: 20cm"/>
+					</section>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Transferencia de Restricciones, (Tensores)</h5>
+					</div> 
+					<img src="./asserts/ast_i.png"/>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Transferencia de Restricciones, (Clases)</h5>
+					</div> 
+					<img src="./asserts/ast_member.png" style="height: 8cm; width: 15cm"/>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Definición de un Álgebra de Dominios</h5>
+					</div> 
+						<div>=> (0, 100) != [20, 50, 30, 40] </div>
+						<div>=>[(0, 19), (21, 29), (31, 39), (41, 49), (50, 100)]</div>
+						<img src="./asserts/ast_dynamic_base.png" style="height: 6cm; width: 10cm"/>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Definición de un Álgebra de Dominios</h5>
+					</div> 
+					<div data-markdown>
+						<textarea data-template>
+							```python
+							# (-oo, oo) < 5 => (-oo, oo)
+							Domain[float]| (lambda x: x < 5)
+							
+							# (-oo, oo) < 5 => (-oo, 4)
+							Domain[int]| (lambda x: x < 5)
+							
+							# [1, ..., 10] < 5 => [1, ..., 4]
+							Domain[int](options=[i for i in range(10)]) | (
+								lambda x: x < 5)
+							
+							# [1, ..., 10] != 5 = [1, ..., 4, 6, ... 10]
+							Domain[int](options=[i for i in range(10)]) | (
+								lambda x: x != 5)
+							```
+						</textarea>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Definición de un Álgebra de Dominios</h5>
+					</div> 
+					<div data-markdown>
+						<textarea data-template>
+							```python
+							#           (-oo, oo) != 5 => [(-oo, 4), (6, oo)]
+							# [(-oo, 4), (6, oo)] != 10 => [(-oo, 4), (6, 9), (11, oo)]
+							Domain[int]| (lambda x: x != 5, x != 10)
+							
+							# (0, 15) | [20, 100,200] => [(0, 15), [20, 100,200]]
+							Domain[int]| (lambda x: (
+								(0 <= x, x <= 15) | (x == [20, 100,200])
+							))
+							```
+						</textarea>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Definición de un Álgebra de Dominios</h5>
+					</div> 
+					<div data-markdown style="width: 27cm;">
+						<textarea data-template>
+							```python
+							#              (0, 15) + 10 => LTD((10, 25), 
+							#                                 transformer=lambda x: x, 
+							#                                 inverted=lambda x: x - 10)
+							# LTD((10, 25), ....) != 20 => LTD([(10, 19), (21, 25)], 
+							#                                 transformer=lambda x: x, 
+							#                                 inverted=lambda x: x - 10)
+							Domain[int](min = 0, max = 15) | (lambda x: x + 10 != 20))	
+							```
+						</textarea>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Generación de Muestras, Contexto, Dominios Dinámicos y BackTracking</h5>
+					</div> 
+					<div data-markdown style="width: 27cm;">
+						<textarea data-template>
+								```python
+								class CustomClass:
+									ValueDomain = Domain[int](min=0, max=1000)
+								
+									def __init__(
+										self, 
+										value: int = ValueDomain, 
+										size: int = Domain[int](min=0, max=1000)) -> None:
+										self.value, self.size = value, size
+								
+								random_limit = Domain[int](min=10, max=50)
+								lcc_space = Domain[CustomClass][10] | (
+									lambda x, i, y = random_limit: ( 
+										x[i > 3].ValueDomain != [20, 50, 30, 40],
+										x[i > 3].ValueDomain < y
+									)	
+								```
+						</textarea>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Generación de Muestras, Contexto, Dominios Dinámicos y BackTracking</h5>
+					</div> 
+					<div data-markdown style="width: 27cm;">
+						<textarea data-template>
+							```python
+							# [(0, 19), (21, 29), (31, 39), (41, 49), (50, 100)].
+							# random_limit genera 35
+							# [N(0, 19), N(21, 29), N(31, 34)].
+							tensor_instance, context = lcc_space.get_sample()
+							# tensor_instance = [1,21,33,2,25,31,7,27,22,1]
+							random_int, _ = random_limit.get_sample(context=context) 
+							# random_int = 35
+							
+
+							random_int, context = random_limit.get_sample()
+							# random_int = 35
+							# N(0, 16)
+							tensor_instance, _ = lcc_space.get_sample(context=context)
+							#tensor_instance = [13,1,10,15,2,6,16,11,3,0]
+							```
+						</textarea>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h5>Generación de Muestras, Contexto, Dominios Dinámicos y BackTracking</h5>
+					</div> 
+					<div data-markdown style="width: 27cm;">
+						<textarea data-template>
+							```python
+							def get_sample(self, context=None):
+
+								if not context is None:
+									# Revisar la cache del contexto
+									# 1) Devolver valor de la cache
+									# 2) Marcar el inicio de la generación
+									# 3) Lanzar error de dependencia circular
+								else:
+									context = SamplerContext(self.space_name)
+								...
+							```
+						</textarea>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-id="b">
+					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+						<h8>Implementación, Ideas Principales</h8>
+						<h6>Generación de Muestras, Contexto, Dominios Dinámicos y BackTracking</h6>
+					</div> 
+					<div data-markdown style="width: 27cm;">
+						<textarea data-template>
+							```python
+							domain, ast_result = self.__domain_filter__(domain, context)
+							
+							while True:
+								sample, sample_context = self.__sampler__(domain, context)
+								try:
+									self.__check_sample__(sample, ast_result, sample_context)
+									context.registry_sampler(self, sample)
+									return sample, context
+								except InvalidSampler as e:
+									....
+								...
+							```
+						</textarea>
+					</div>
+				</section>
+			</section>
+
+
+			<section>
+				<img src="./asserts/exp2.png" style="height: 18cm; width: 20cm"/>
+			</section>
+			<section>
+				<img src="./asserts/exp3.png" style="height: 18cm; width: 30cm"/>
+			</section>
+
+			<section>
+				<img src="./asserts/exp4.png" style="height: 10cm; width: 20cm"/>
+			</section>
+			<section>
+				<img src="./asserts/exp5.png" style="height: 18cm; width: 20cm"/>
+			</section>
+			<section>
+				<img src="./asserts/exp6.png" style="height: 18cm; width: 20cm"/>
+			</section>
+			<section>
+				<img src="./asserts/exp7.png" style="height: 18cm; width: 20cm"/>
+			</section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+		markdown: {
+   		 smartypants: true
+  		},
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
