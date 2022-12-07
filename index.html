@@ -33,6 +33,19 @@
         	</section>
 			<section data-auto-animate data-auto-animate-id="b">
 				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+					<h4>Distribución de la exposición</h3>
+				</div> 
+				<ul style="margin-top: 0.2cm; font-size:0.8cm;">
+					<li>Origen, Problema y Objetivos</li>	
+					<li>Exposición de la sintaxis mediante ejemplos</li>	
+					<li>Implementación, Ideas Principales</li>	
+					<li>Resultados</li>	
+					<li>Conclusiones</li>	
+					<li>Recomendaciones</li>		
+				</ul>
+			</section>
+			<section data-auto-animate data-auto-animate-id="b">
+				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
 					<h4>Origen, Problema y Objetivos</h3>
 				</div> 
 			</section>
@@ -41,13 +54,13 @@
 						<h4>Origen</h3>
 					</div> 
 
-					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm;">
-						...Una biblioteca de Python para encontrar automáticamente la mejor 
+					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm; width: 25cm;">
+						&ldquo;...Una biblioteca de Python para encontrar automáticamente la mejor 
 						manera de resolver una tarea determinada.... 
 						Técnicamente hablando, AutoGOAL es un marco para la síntesis de 
 						programas, es decir, encontrar el mejor programa para resolver un 
 						problema dado, siempre que <span data-id="user_action">el usuario pueda describir</span>  el espacio de 
-						todos los programas posibles	
+						todos los programas posibles ...&rdquo;
 					</div>
 
 			</section>
@@ -55,16 +68,16 @@
 					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
 						<h4>Origen</h3>
 					</div> 
-					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm;">
-						...Una biblioteca de Python para encontrar automáticamente la mejor 
+					<div data-id="auto_def" style="font-style:italic; font-size:0.8cm; width: 25cm;">
+						&ldquo;...Una biblioteca de Python para encontrar automáticamente la mejor 
 						manera de resolver una tarea determinada.... 
 						Técnicamente hablando, AutoGOAL es un marco para la síntesis de 
 						programas, es decir, encontrar el mejor programa para resolver un 
 						problema dado, siempre que <span data-id="user_action" style="background: #D69151;padding-left: 0.2cm; padding-right: 0.2cm;">el usuario pueda describir</span> 
-						el espacio de todos los programas posibles	
+						el espacio de todos los programas posibles ...&rdquo;
 					</div>
 			</section>
-			<section data-auto-animate data-auto-animate-id="b">
+			<!-- <section data-auto-animate data-auto-animate-id="b">
 					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
 						<h4>Origen</h3>
 					</div> 
@@ -166,7 +179,7 @@
 						<div data-id="restricciones">las restricciones son validaciones</div>
 						<div>operaciones de alto nivel primitivas</div>
 					</div>
-			</section>
+			</section> -->
 			
 			<section data-auto-animate data-auto-animate-id="b">
 					<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
@@ -312,16 +325,6 @@
 						</div>
 			</section>
 			
-			<section data-auto-animate data-auto-animate-id="b">
-			
-				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
-					<h4>Modelos de Sklearn</h3>
-				</div> 
-			
-				<div data-markdown>
-					texto o imagen de sklearn
-				</div>
-			</section>
 			<section data-auto-animate data-auto-animate-id="b">
 			
 				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
@@ -540,7 +543,7 @@
 							w: float, items: List[BagItem], 
 							current_counts: List[int]
 						):
-							return Accumulated Weight  
+							return "Accumulated Weight"  
 
 						class BagSolution(BagProblem):
 							SolutionDomain = Domain[int][BagProblem.ItemsLenDomain] | (
@@ -577,7 +580,7 @@
 							country_colored: List[int], 
 							color_len: int
 						):
-							result = List of adjacent colors
+							result = "List of adjacent colors"
 							if len(result) == color_len:
 								return []
 							return list(result)
@@ -624,12 +627,12 @@
 						```python
 						class AbsCluster:
 							NClusterDomain = Domain[int]()
-							def __init__(self, n_clusters: int = NClusterDomain) -> None:
+							def __init__(self, n_clusters: int = NClusterDomain):
 								self.n = n_clusters
 					
 						class AbsClassifier:
 							NCategoryDomain = Domain[int]()
-							def __init__(self, n_categories: int = NCategoryDomain) -> None:
+							def __init__(self, n_categories: int = NCategoryDomain):
 								self.n = n_categories		
 						```
 					</textarea>
@@ -641,7 +644,7 @@
 				</div> 
 				<div data-markdown>
 					<textarea data-template>
-						```python					
+						```python [1,4,7]				
 						class KMeans(AbsCluster):
 							pass
 						
@@ -665,14 +668,19 @@
 				</div> 
 				<div data-markdown>
 					<textarea data-template>
-						```python
+						```python [1,3,8,11]
 						class KNN(AbsClassifier):
-							def __init__(self, n_categories: int = AbsClassifier.NCategoryDomain) -> None:
+							def __init__(self, 
+								n_categories: int = AbsClassifier.NCategoryDomain
+							) -> None:
 								super().__init__(n_categories)
 								k = self.n * 2 - 1
 						
 						class GaussianNB(AbsClassifier):
-							def __init__(self, n_categories: int = AbsClassifier.NCategoryDomain) -> None:
+							def __init__(
+								self, 
+								n_categories: int = AbsClassifier.NCategoryDomain
+							) -> None:
 								super().__init__(n_categories)
 								p = [1/n_categories for _ in range(n_categories)]		
 						```
@@ -683,19 +691,22 @@
 				<div style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm;">
 					<h4>Casos de Uso, AutoML</h3>
 				</div> 
-				<div data-markdown style="width: 28cm;">
+				<div data-markdown >
 					<textarea data-template>
-						```python
+						```python [2,3,6-9]
 						class SemiSupervisedClassifier:
-							ClusterDomain = Domain[Union[KMeans, AgglomerativeClustering]]()
+							ClusterDomain = Domain[
+								Union[KMeans, AgglomerativeClustering]]()
 							def __init__(self, 
 								cluster: AbsCluster = ClusterDomain,
-								classifier: AbsClassifier = Domain[Union[KNN, GaussianNB]] | (
-									lambda x, c=ClusterDomain: (
-										x.NCategoryDomain == c.NClusterDomain
+								classifier: AbsClassifier = Domain[
+									Union[KNN, GaussianNB]] | (
+										lambda x, c=ClusterDomain: (
+											x.NCategoryDomain == c.NClusterDomain
 									))
 							) -> None:
-								self.cluster, self.classifier = cluster, classifier		
+								self.cluster = cluster 	
+								self.classifier = classifier
 						```
 					</textarea>
 				</div>
@@ -928,11 +939,12 @@
 				</div>
 			</section>
 			<section data-auto-animate data-auto-animate-id="b">
-				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 0.2cm; width: 25cm;">
 					<h8>Implementación, Ideas Principales</h8>
 					<h6>Generación de Muestras, Contexto, Dominios Dinámicos y BackTracking</h6>
 				</div> 
-				<div data-markdown style="width: 27cm;">
+				<img src="/asserts/alg.png">
+				<!-- <div data-markdown style="width: 27cm;">
 					<textarea data-template>
 						```python
 						domain, ast_result = self.__domain_filter__(domain, context)
@@ -948,11 +960,13 @@
 							...
 						```
 					</textarea>
-				</div>
+				</div> -->
 			</section>
-
-
-
+			<section>
+				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+					<h4>Resultados</h3>
+				</div> 
+			</section>
 			<section>
 				<img src="./asserts/exp2.png" style="height: 18cm; width: 20cm"/>
 			</section>
@@ -977,25 +991,64 @@
 				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
 					<h4>Conclusiones</h3>
 				</div> 
-
-				<!-- <ul style="margin-top: 0.2cm; font-size:0.8cm;">
-					<li>Diseñar una Herramienta Independiente y Modularizada</li>	
-					<li>Superar las Limitaciones Expresivas:
-						<ul>
-							<li>Dependencia Contextuales</li>
-							<li>Espacios Recursivos</li>
-							<li>Espacios de Dimensiones Aleatorias</li>
-							<li>Espacios de Opcionales</li>
-						</ul>
-					</li>	
-					<li>Lograr Descripciones Declarativas, Expresivas, Escalables y Mantenibles</li>	
-					<li>Generar Muestras Coherentes con las Descripciones(lo más optimas posibles)
-						<ul>
-							<li>Generaciones Lineales</li>
-							<li>Generaciones Rápidas</li>
-						</ul>
-					</li>	
-				</ul> -->
+			</section>
+			<section data-auto-animate data-auto-animate-id="b">
+				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+					<h8>Recomendaciones</h8>
+				</div> 
+				<ul style="margin-top: 0.2cm; font-size:0.8cm;">
+					<li>Persistir del aprendizaje resultante del proceso de “prueba y error”</li>	
+					<li>Desarrollo de una colección de funciones de "caja negra"</li>	
+					<li>Mejorar la declaración de distribuciones</li>
+					<li>Incorporar interfaces de comunicación con optimizadores</li>
+				</ul>
+			</section>
+			<section data-auto-animate data-auto-animate-id="b">
+				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+					<h8>Recomendaciones</h8>
+				</div> 
+				<div data-markdown >
+					<textarea data-template>
+						```python
+						import math
+						class Sqrt(FunctionalConstraint):
+							  def __call__(self, x: int):
+									return math.sqrt(x)
+				  
+							  def __inverse__(self, x: int):
+									return x * x
+				  
+						space = Domain[int](min = 0) | (lambda x: Sqrt(x) < 10)
+						print(space.limits) # (0, 100)
+						```
+					</textarea>
+				</div>
+			</section>
+			<section data-auto-animate data-auto-animate-id="b">
+				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+					<h8>Recomendaciones</h8>
+				</div> 
+				<div data-markdown>
+					<textarea data-template>
+						```python
+						Domain[int][10] | (lambda x: x[0:2] = (1, 2))
+						Domain[int][10][2] | (lambda x, i: x[i] = (i, i+1))
+						```
+					</textarea>
+				</div>
+			</section>
+			<section data-auto-animate data-auto-animate-id="b">
+				<div data-id="header" style="background: #D69151; padding-bottom: 0.8cm;padding-top: 0.8cm; margin-bottom: 1cm; width: 25cm;">
+					<h8>Recomendaciones</h8>
+				</div> 
+				<div data-markdown>
+					<textarea data-template>
+						```python
+						Domain[int][10] | (lambda x: (x % 10 > 0, x % 10 < 5))
+						Domain[int][10] | (lambda x: (x % 10 % 10 < 5))
+						```
+					</textarea>
+				</div>
 			</section>
       </div>
     </div>
@@ -1004,17 +1057,33 @@
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/math/math.js"></script>
     <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
       Reveal.initialize({
-        hash: true,
+        history: true,
+        transition: "linear",
 		markdown: {
    		 smartypants: true
   		},
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        mathjax2: {
+          config: "TeX-AMS_HTML-full",
+          TeX: {
+            Macros: {
+              R: "\\mathbb{R}",
+              set: ["\\left\\{#1 \\; ; \\; #2\\right\\}", 2],
+            },
+          },
+        },
+
+        // There are three typesetters available
+        // RevealMath.MathJax2 (default)
+        // RevealMath.MathJax3
+        // RevealMath.KaTeX
+        //
+        // More info at https://revealjs.com/math/
+        plugins: [RevealMath.MathJax2, RevealMarkdown, RevealHighlight, RevealNotes],
       });
     </script>
   </body>
